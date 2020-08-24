@@ -36,7 +36,7 @@ def get_drinks():
         return jsonify({
             'success':True,
             'drinks': drinks
-        })
+        }),200
 
 '''
 @TODO implement endpoint
@@ -112,7 +112,7 @@ def patch_drinks(payload,drink_id):
         return jsonify({
             'success':True,
             'deleted':[drink.long()]
-        })
+        }),200
     except:
         abort(422)
 
@@ -137,7 +137,7 @@ def delete_drinks(payload,drink_id):
         return jsonify({
             'success':True,
             'deleted':drink_id
-        })
+        }),200
     except:
         abort(422)
 ## Error Handling
